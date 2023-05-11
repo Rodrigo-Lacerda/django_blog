@@ -10,7 +10,9 @@
     <h1>Post List</h1>
     {% for post in object_list %}
         {{ post.title }}
-        <p>{{ post.content|slice:":200" }}</p>
+        <a href="{{ post.slug }}">
+            <p>{{ post.content|slice:":200" }}</p>
+        </a>
         <p>{{ post.date_post }}</p>
         <p>{{ post.author }}</p>
     {% endfor %}
